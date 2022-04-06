@@ -15,6 +15,8 @@ main {
   background-color: black;
   color: white;
   .content {
+    width: 80%;
+    margin: auto;
     padding: 50px;
   }
 }

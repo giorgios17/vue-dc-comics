@@ -28,7 +28,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 200px;
+  padding: 30px 0px;
+  width: 80%;
+  margin: auto;
   ul {
     list-style-type: none;
     padding: 0;
@@ -41,7 +43,7 @@ header {
         padding-bottom: 40px;
         &:hover {
           color: #0c7cec;
-          border-bottom: 2px solid #0c7cec;
+          border-bottom: 5px solid #0c7cec;
         }
       }
     }
