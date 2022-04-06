@@ -1,8 +1,21 @@
-<template></template>
+<template>
+  <main>
+    <div class="content">--&gt; Content goes here &lt;--</div>
+  </main>
+</template>
 
 <script>
-export default {};
+export default {
+  name: "MainComponent",
+};
 </script>
 
-<style>
+<style lang="scss" scoped>
+main {
+  background-color: black;
+  color: white;
+  .content {
+    padding: 50px;
+  }
+}
 </style>
