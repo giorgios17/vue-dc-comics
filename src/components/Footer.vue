@@ -114,6 +114,7 @@ export default {
 }
 .footernav {
   background-image: url("../assets/footer-bg.jpg");
+  background-size: cover;
   color: white;
   padding: 50px 0px;
   .container {
@@ -136,7 +137,7 @@ export default {
 }
 .footersocial {
   background-color: #303030;
-  padding: 50px 0px;
+  padding: 30px 0px;
   .container {
     display: flex;
     justify-content: space-between;

@@ -2,16 +2,9 @@
   <header>
     <img id="logo" src="../assets/dc-logo.png" alt="logo header" />
     <ul>
-      <li><a href="#">CHARACTERS</a></li>
-      <li><a href="#">COMICS</a></li>
-      <li><a href="#">MOVIES</a></li>
-      <li><a href="#">TV</a></li>
-      <li><a href="#">GAMES</a></li>
-      <li><a href="#">COLLECTIBLES</a></li>
-      <li><a href="#">VIDEOS</a></li>
-      <li><a href="#">FANS</a></li>
-      <li><a href="#">NEWS</a></li>
-      <li><a href="#">SHOP</a></li>
+      <li :key="index" v-for="(item, index) in navHeader">
+        <a href="#">{{ item }}</a>
+      </li>
     </ul>
   </header>
 </template>
@@ -19,6 +12,22 @@
 <script>
 export default {
   name: "HeaderComponent",
+  data: function () {
+    return {
+      navHeader: [
+        "CHARACTERS",
+        "COMICS",
+        "MOVIES",
+        "TV",
+        "GAMES",
+        "COLLECTIBLES",
+        "VIDEOS",
+        "FANS",
+        "NEWS",
+        "SHOP",
+      ],
+    };
+  },
 };
 </script>
 

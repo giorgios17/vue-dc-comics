@@ -18,6 +18,8 @@ main {
     width: 80%;
     margin: auto;
     padding: 50px;
+    font-size: 25px;
+    font-weight: bold;
   }
 }
 </style>
