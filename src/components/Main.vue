@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import CardComponent from "./components/Card.vue";
+import CardComponent from "@/components/Card.vue";
 
 export default {
   name: "MainComponent",
