@@ -47,14 +47,14 @@ main {
       color: $color-white;
       position: absolute;
       bottom: -20px;
-      left: 150px;
+      left: 250px;
     }
   }
   .content {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 25px;
-    width: 80%;
+    justify-content: center;
+    width: 70%;
     margin: auto;
     padding: 50px;
   }

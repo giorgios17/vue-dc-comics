@@ -209,7 +209,4 @@ export default {
     }
   }
 }
-.prova {
-  display: flex;
-}
 </style>
