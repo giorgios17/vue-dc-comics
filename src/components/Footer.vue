@@ -53,11 +53,6 @@
           <div :key="index" v-for="(social, index) in allSocial">
             <img :src="social" alt="social" />
           </div>
-          <!-- <img src="../assets/footer-facebook.png" alt="facebook" />
-          <img src="../assets/footer-twitter.png" alt="twitter" />
-          <img src="../assets/footer-youtube.png" alt="youtube" />
-          <img src="../assets/footer-pinterest.png" alt="pinterest" />
-          <img src="../assets/footer-periscope.png" alt="periscope" /> -->
         </div>
       </div>
     </section>
@@ -154,11 +149,13 @@ export default {
     width: 75%;
     margin: auto;
     img {
-      width: 50px;
+      width: 40px;
     }
     p {
       color: $color-white;
-      margin: 0px 80px 0px 10px;
+      margin-left: 8px;
+      margin-right: 30px;
+      font-size: 15px;
     }
   }
 }
