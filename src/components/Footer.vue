@@ -80,6 +80,7 @@ export default {
   name: "FooterComponent",
   data: function () {
     return {
+      //FOOTER NAV DCCOMICS
       dcComics: [
         "Characters",
         "Comics",
@@ -89,7 +90,9 @@ export default {
         "Videos",
         "News",
       ],
+      //FOOTER NAV SHOP
       shop: ["Shop DC", "Shop DC Collectibles"],
+      //FOOTER NAV DC
       dc: [
         "Terms of Use",
         "Privacy Policy (New)",
@@ -103,8 +106,11 @@ export default {
         "Shop Help",
         "Contact Us",
       ],
+      //FOOTER NAV SITES
       sites: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"],
+      // SOCIAL
       allSocial: [Facebook, Twitter, Youtube, Pinterest, Periscope],
+      //INFOLINK
       infolink: [
         {
           name: "DIGITAL COMICS",
@@ -137,6 +143,10 @@ export default {
 .infolink {
   background-color: $blue-DC;
   padding: 30px 0px;
+  .info {
+    display: flex;
+    align-items: center;
+  }
   .container {
     display: flex;
     flex-wrap: wrap;
