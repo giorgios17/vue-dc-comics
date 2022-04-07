@@ -3,26 +3,10 @@
     <!-- shop link -->
     <section class="shoplink">
       <div class="container">
-        <img
-          src="../assets/buy-comics-digital-comics.png"
-          alt="Digital Comics"
-        />
-        <p>DIGITAL COMICS</p>
-        <img src="../assets/buy-comics-merchandise.png" alt="Digital Comics" />
-        <p>DC MERCHANDISE</p>
-        <img
-          src="../assets/buy-comics-subscriptions.png"
-          alt="Digital Comics"
-        />
-        <p>SUBSCRIPTION</p>
-        <img src="../assets/buy-comics-shop-locator.png" alt="Digital Comics" />
-        <p>COMIC SHOP LOCATOR</p>
-        <img
-          id="powervisa"
-          src="../assets/buy-dc-power-visa.svg"
-          alt="Digital Comics"
-        />
-        <p>DC POWER VISA</p>
+        <div :key="index" v-for="(link, index) in shoplink">
+          <img :src="link.image" :alt="link.name" />
+          <p>{{ link.name }}</p>
+        </div>
       </div>
     </section>
     <!-- footer nav -->
@@ -81,6 +65,12 @@
 </template>
 
 <script>
+import Comic from "@/assets/buy-comics-digital-comics.png";
+import Merchandise from "@/assets/buy-comics-merchandise.png";
+import ShopLocator from "@/assets/buy-comics-shop-locator.png";
+import Subscriptions from "@/assets/buy-comics-subscriptions.png";
+import PowerVisa from "@/assets/buy-dc-power-visa.svg";
+
 export default {
   name: "FooterComponent",
   data: function () {
@@ -119,23 +109,23 @@ export default {
       shoplink: [
         {
           name: "DIGITAL COMICS",
-          image: "comics-digital-comics.png",
+          image: Comic,
         },
         {
           name: "DC MERCHANDISE",
-          image: "comics-merchandise.png",
+          image: Merchandise,
         },
         {
           name: "SUBSCRIPTION",
-          image: "comics-subscriptions.png",
+          image: Subscriptions,
         },
         {
           name: "COMIC SHOP LOCATOR",
-          image: "comics-shop-locator.png",
+          image: ShopLocator,
         },
         {
           name: "DC POWER VISA",
-          image: "dc-power-visa.svg",
+          image: PowerVisa,
         },
       ],
     };
@@ -212,5 +202,8 @@ export default {
       }
     }
   }
+}
+.prova {
+  display: flex;
 }
 </style>
