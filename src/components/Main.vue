@@ -4,10 +4,16 @@
       <span class="current-series">CURRENT SERIES</span>
     </div>
     <div class="content">
-      <div class="card" :key="index" v-for="(fumetto, index) in Fumetto">
+      <!-- <div class="card" :key="index" v-for="(fumetto, index) in Fumetto">
         <img :src="fumetto.thumb" :alt="fumetto.series" />
         <p>{{ fumetto.series }}</p>
-      </div>
+      </div> -->
+      <CardComponent
+        v-for="(fumetto, index) in Fumetto"
+        :key="'fumetto' + index"
+        :Img="fumetto.thumb"
+        :Series="fumetto.series"
+      />
     </div>
     <div class="text-center">
       <button id="loadMore">LOAD MORE</button>
@@ -16,10 +22,15 @@
 </template>
 
 <script>
+import CardComponent from "./components/Card.vue";
+
 export default {
   name: "MainComponent",
   props: {
     Fumetto: Array,
+  },
+  components: {
+    CardComponent,
   },
 };
 </script>
@@ -49,12 +60,6 @@ main {
     width: 80%;
     margin: auto;
     padding: 50px;
-    .card {
-      width: calc(100% / 6 - 25px);
-      img {
-        width: 100%;
-      }
-    }
   }
   .text-center {
     text-align: center;
