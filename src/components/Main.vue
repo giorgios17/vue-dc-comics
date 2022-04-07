@@ -4,10 +4,6 @@
       <span class="current-series">CURRENT SERIES</span>
     </div>
     <div class="content">
-      <!-- <div class="card" :key="index" v-for="(fumetto, index) in Fumetto">
-        <img :src="fumetto.thumb" :alt="fumetto.series" />
-        <p>{{ fumetto.series }}</p>
-      </div> -->
       <CardComponent
         v-for="(fumetto, index) in Fumetto"
         :key="'fumetto' + index"
@@ -36,18 +32,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/style/variables";
 main {
   background-color: black;
-  color: white;
+  color: $color-white;
   .jumbotron {
     background-image: url("../assets/jumbotron.jpg");
     height: 400px;
     position: relative;
     .current-series {
-      background-color: #0c7cec;
+      background-color: $blue-DC;
       padding: 10px 25px;
       font-size: 18px;
-      color: white;
+      color: $color-white;
       position: absolute;
       bottom: -20px;
       left: 150px;
@@ -65,9 +62,9 @@ main {
     text-align: center;
     #loadMore {
       text-align: center;
-      background-color: #0c7cec;
+      background-color: $blue-DC;
       border: 0;
-      color: white;
+      color: $color-white;
       padding: 10px 40px;
       cursor: pointer;
       margin-bottom: 20px;

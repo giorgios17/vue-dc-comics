@@ -144,8 +144,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/style/variables";
 .shoplink {
-  background-color: #0c7cec;
+  background-color: $blue-DC;
   padding: 30px 0px;
   .container {
     display: flex;
@@ -157,7 +158,7 @@ export default {
       width: 50px;
     }
     p {
-      color: white;
+      color: $color-white;
       margin: 0px 80px 0px 10px;
     }
   }
@@ -165,7 +166,7 @@ export default {
 .footernav {
   background-image: url("../assets/footer-bg.jpg");
   background-size: cover;
-  color: white;
+  color: $color-white;
   padding: 50px 0px;
   .container {
     display: flex;
@@ -179,7 +180,7 @@ export default {
         text-decoration: none;
         color: gray;
         &:hover {
-          color: white;
+          color: $color-white;
         }
       }
     }
@@ -195,9 +196,9 @@ export default {
     width: 80%;
     margin: auto;
     a {
-      color: white;
+      color: $color-white;
       text-decoration: none;
-      border: 2px solid #0c7cec;
+      border: 2px solid $blue-DC;
       padding: 10px;
     }
     .social {
@@ -206,7 +207,7 @@ export default {
       column-gap: 20px;
       p {
         display: inline-block;
-        color: #0c7cec;
+        color: $blue-DC;
         font-weight: bold;
       }
     }

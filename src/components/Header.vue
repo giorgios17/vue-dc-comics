@@ -33,6 +33,7 @@ export default {
 
 
 <style scoped lang="scss">
+@import "@/assets/style/variables";
 header {
   display: flex;
   justify-content: space-between;
@@ -51,8 +52,8 @@ header {
         text-decoration: none;
         padding-bottom: 40px;
         &:hover {
-          color: #0c7cec;
-          border-bottom: 5px solid #0c7cec;
+          color: $blue-DC;
+          border-bottom: 5px solid $blue-DC;
         }
       }
     }
