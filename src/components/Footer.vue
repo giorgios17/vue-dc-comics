@@ -1,9 +1,9 @@
 <template>
   <footer>
     <!-- shop link -->
-    <section class="shoplink">
+    <section class="infolink">
       <div class="container">
-        <div :key="index" v-for="(link, index) in shoplink">
+        <div class="info" :key="index" v-for="(link, index) in infolink">
           <img :src="link.image" :alt="link.name" />
           <p>{{ link.name }}</p>
         </div>
@@ -50,14 +50,14 @@
         <a id="signup" href="#">SIGN-UP NOW!</a>
         <div class="social">
           <p>FOLLOW US</p>
-          <!-- <div :key="index" v-for="(item, index) in social">
-            <img :src="'../assets/footer-' + item" alt="facebook" />
-          </div> -->
-          <img src="../assets/footer-facebook.png" alt="facebook" />
+          <div :key="index" v-for="(social, index) in allSocial">
+            <img :src="social" alt="social" />
+          </div>
+          <!-- <img src="../assets/footer-facebook.png" alt="facebook" />
           <img src="../assets/footer-twitter.png" alt="twitter" />
           <img src="../assets/footer-youtube.png" alt="youtube" />
           <img src="../assets/footer-pinterest.png" alt="pinterest" />
-          <img src="../assets/footer-periscope.png" alt="periscope" />
+          <img src="../assets/footer-periscope.png" alt="periscope" /> -->
         </div>
       </div>
     </section>
@@ -70,6 +70,11 @@ import Merchandise from "@/assets/buy-comics-merchandise.png";
 import ShopLocator from "@/assets/buy-comics-shop-locator.png";
 import Subscriptions from "@/assets/buy-comics-subscriptions.png";
 import PowerVisa from "@/assets/buy-dc-power-visa.svg";
+import Periscope from "@/assets/footer-periscope.png";
+import Pinterest from "@/assets/footer-pinterest.png";
+import Facebook from "@/assets/footer-facebook.png";
+import Twitter from "@/assets/footer-twitter.png";
+import Youtube from "@/assets/footer-youtube.png";
 
 export default {
   name: "FooterComponent",
@@ -99,14 +104,8 @@ export default {
         "Contact Us",
       ],
       sites: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"],
-      social: [
-        "facebook.png",
-        "twitter.png",
-        "youtube.png",
-        "pinterest.png",
-        "periscope.png",
-      ],
-      shoplink: [
+      allSocial: [Facebook, Twitter, Youtube, Pinterest, Periscope],
+      infolink: [
         {
           name: "DIGITAL COMICS",
           image: Comic,
@@ -135,7 +134,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/style/variables";
-.shoplink {
+.infolink {
   background-color: $blue-DC;
   padding: 30px 0px;
   .container {
