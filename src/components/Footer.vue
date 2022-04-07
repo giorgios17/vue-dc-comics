@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <!-- shop link -->
     <section class="shoplink">
       <div class="container">
         <img
@@ -24,6 +25,7 @@
         <p>DC POWER VISA</p>
       </div>
     </section>
+    <!-- footer nav -->
     <section class="footernav">
       <div class="container">
         <div class="col">
@@ -58,16 +60,20 @@
         </div>
       </div>
     </section>
+    <!-- social link & signup -->
     <section class="footersocial">
       <div class="container">
         <a id="signup" href="#">SIGN-UP NOW!</a>
         <div class="social">
           <p>FOLLOW US</p>
+          <!-- <div :key="index" v-for="(item, index) in social">
+            <img :src="'../assets/footer-' + item" alt="facebook" />
+          </div> -->
           <img src="../assets/footer-facebook.png" alt="facebook" />
-          <img src="../assets/footer-twitter.png" alt="facebook" />
-          <img src="../assets/footer-youtube.png" alt="facebook" />
-          <img src="../assets/footer-pinterest.png" alt="facebook" />
-          <img src="../assets/footer-periscope.png" alt="facebook" />
+          <img src="../assets/footer-twitter.png" alt="twitter" />
+          <img src="../assets/footer-youtube.png" alt="youtube" />
+          <img src="../assets/footer-pinterest.png" alt="pinterest" />
+          <img src="../assets/footer-periscope.png" alt="periscope" />
         </div>
       </div>
     </section>
@@ -103,6 +109,35 @@ export default {
         "Contact Us",
       ],
       sites: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"],
+      social: [
+        "facebook.png",
+        "twitter.png",
+        "youtube.png",
+        "pinterest.png",
+        "periscope.png",
+      ],
+      shoplink: [
+        {
+          name: "DIGITAL COMICS",
+          image: "comics-digital-comics.png",
+        },
+        {
+          name: "DC MERCHANDISE",
+          image: "comics-merchandise.png",
+        },
+        {
+          name: "SUBSCRIPTION",
+          image: "comics-subscriptions.png",
+        },
+        {
+          name: "COMIC SHOP LOCATOR",
+          image: "comics-shop-locator.png",
+        },
+        {
+          name: "DC POWER VISA",
+          image: "dc-power-visa.svg",
+        },
+      ],
     };
   },
 };

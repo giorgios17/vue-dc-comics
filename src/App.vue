@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Main />
+    <Main :Fumetto="Fumetto" />
     <Footer />
   </div>
 </template>
@@ -10,6 +10,7 @@
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
+import Fumetto from "./assets/data/dc-comics";
 
 export default {
   name: "App",
@@ -17,6 +18,11 @@ export default {
     Header,
     Main,
     Footer,
+  },
+  data() {
+    return {
+      Fumetto,
+    };
   },
 };
 </script>
